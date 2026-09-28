@@ -1,53 +1,53 @@
 # Práctica 3: Área y perímetro de un rectángulo
 ## 1. Descripción del problema (Fase 1)
-<!-- Explica con tus palabras qué hace tu programa y para qué serviría en la vida real. Máximo 4 líneas. -->
+Programa que le pida al usuario el ancho y el alto de un rectangulo para luego mostrar su area y perimetro. Si un numero ingresado es 0 volver a solicitarlo.
 
-_____
 
 ## 2. Entradas y salidas (Fase 1)
 <!-- Define cada entrada y cada salida, con su tipo de dato, sus unidades y su objetivo. -->
 
 **Entradas:**
-1. _____
-2. _____
+1. Alto
+2. Ancho
 
 **Salidas:**
-1. _____
-2. _____
+1. Area
+2. Perimetro
 
 **Fórmulas** (área y perímetro):
-_____
+area= ancho * alto
+perimetro= 2 x (ancho + alto)
 
 ## 3. Restricciones e invariante (Fase 1 y 2)
 
 **Restricciones** (¿qué debe cumplirse?):
-- _____
-- _____
+- El ancho debe ser un numero mayor que 0 (un rectangulo no puede medir 0 ni una cantidad negativa)
+-  El alto debe ser un numero mayor que 0, por la misma razon.
 
 **¿Qué hace mi programa con una medida de 0 o negativa? ¿Por qué?**
-_____
+Vuelve a pedir la medida, una y otra vez, hasta que el usuario escriba un valor mayor que 0. No hay limite de intentos. Lo hago asi porque un ancho o alto de 0 o negativo no tiene sentido fisico, y si lo dejara pasar el programa mostrara un area y un perimetro incorrectos sin avisar (por ejemplo, con -4 × 3 da de area -12).
 
 **¿Quién detecta cada error?** (¿qué revisa `leerDecimal` y qué reviso yo?)
-_____
+`leerDecimal` revisa el formato: que lo escrito sea un numero. Rechaza cosas como `abc` o `12abc` y vuelve a pedir el dato. Pero `-3` y `0` si son numeros validos, asi que los deja pasar. Revisar el rango (que la medida sea mayor que 0) lo hace mi programa con la condicion del ciclo `do-while`.
+
 
 **Invariante** (al salir del ciclo que pide el ancho, ¿qué es seguro sobre `ancho`?):
-_____
+Al salir del ciclo, `ancho` es un numero valido (`leerDecimal` ya verifico el formato) y es mayor que 0 (mi ciclo ya verifico el rango). Como esta frase siempre se cumple al salir, puedo calcular el area y el perimetro sin volver a revisar el dato.
 
 ## 4. Casos resueltos a mano (Fase 1)
 
 | Caso | Ancho | Alto | Área calculada a mano | Perímetro calculado a mano |
 |---|---|---|---|---|
-| 1 | _____ | _____ | _____ | _____ |
-| 2 (cuadrado) | _____ | _____ | _____ | _____ |
-| 3 (con decimales) | _____ | _____ | _____ | _____ |
+| 1 | 5 | 3 | 15 | 16 |
+| 2 (cuadrado) | 4 | 4 | 16 | 16 |
+| 3 (con decimales) | 2.5 | 4 | 10 | 13 |
 
 ## 5. Receta en pseudocódigo (Fase 2)
 <!-- Tu receta va en el archivo RECETA.md. Aquí solo responde las preguntas. -->
 
-**¿Probé mi receta a mano con un caso válido y uno inválido?** Sí / No
-**¿Tuve que corregirla?** _____
-**¿Cuántas versiones de mi receta escribí hasta la final?** _____
-
+**¿Probé mi receta a mano con un caso válido y uno inválido?** Sí 
+**¿Tuve que corregirla?** no
+**¿Cuántas versiones de mi receta escribí hasta la final?** 1
 ## 6. Cómo compilar y ejecutar (Fase 3)
 
 ```bash

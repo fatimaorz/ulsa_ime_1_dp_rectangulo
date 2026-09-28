@@ -6,5 +6,14 @@
 
 ``` text
 1. MOSTRAR "Bienvenido a mi programa de rectangulo"
-
-```
+2. REPETIR
+     ancho ← leerDecimal("Ancho en cm (mayor que 0): ")
+   HASTA QUE ancho > 0
+3. REPETIR
+     alto ← leerDecimal("Alto en cm (mayor que 0): ")
+   HASTA QUE alto > 0
+4. area ← ancho * alto
+5. perimetro ← 2 * (ancho + alto)
+6. MOSTRAR "Area: " area " cm2"
+7. MOSTRAR "Perimetro: " perimetro " cm"
+8. FIN
