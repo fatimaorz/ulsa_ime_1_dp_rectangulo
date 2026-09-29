@@ -21,19 +21,12 @@ int main() {
     //    TODO: ¿qué haces si es 0 o negativo? ¿Cuántas veces lo vuelves a pedir?
     do {
         ancho =leerDecimal ("Ancho en cm (mayor de 0): ");
-    } while (ancho <= 0)
-    .
-    //    TODO: lee el ancho con leerDecimal("...")
-    //    TODO: ¿qué haces si es 0 o negativo? ¿Cuántas veces lo vuelves a pedir?
-     do {
-        alto = leerDecimal ("Alto en cm (mayor que 0): ")
-     } while (alto <= 0)
-    // 3. Entrada: el alto
-    //    TODO: mismo criterio que el ancho
+             } while (ancho <= 0);
 
-    // 4. Proceso
-    //    TODO: calcula el área y el perímetro
-    //    ¿Estás seguro(a) del orden en que C++ hace las operaciones?
+     do {
+        alto =leerDecimal ("Alto en cm (mayor que 0): ");
+             } while (alto <= 0);
+
     area = ancho * alto;
     perimetro = 2 * (ancho + alto);
     // 5. Salida

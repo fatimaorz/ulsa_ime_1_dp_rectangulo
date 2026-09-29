@@ -56,11 +56,11 @@ g++ -Wall -Wextra -std=c++17 main.cpp -o rectangulo
 ```
 
 ## 7. Ejemplo de ejecución (Fase 3)
-<!-- Pega aquí lo que muestra tu programa en pantalla con un caso normal. -->
-
-```
-_____
-```
+Area y perimetro de un rectangulo
+Ancho en cm (mayor de 0): 45
+Alto en cm (mayor que 0): 12
+Area: 540cm2
+Perimetro: 114cm 
 
 ## 8. Experimentos (Fase 3)
 
@@ -77,15 +77,15 @@ _____
 
 | Caso | Ancho | Alto | Esperado | Obtenido | ¿Pasó? |
 |---|---|---|---|---|---|
-| Normal | 5 | 3 | Área 15, perímetro 16 | _____ | _____ |
-| Cuadrado | 4 | 4 | Área 16, perímetro 16 | _____ | _____ |
-| Decimales | 2.5 | 4 | Área 10, perímetro 13 | _____ | _____ |
-| Muy pequeño | 0.1 | 0.1 | Área 0.01, perímetro 0.4 | _____ | _____ |
-| Ancho cero | 0 | 3 | vuelve a pedir el ancho | _____ | _____ |
-| Alto negativo | 5 | -2 | vuelve a pedir el alto | _____ | _____ |
-| Texto | `abc` | 3 | `leerDecimal` vuelve a pedir | _____ | _____ |
-| Caso propio 1 | _____ | _____ | _____ | _____ | _____ |
-| Caso propio 2 | _____ | _____ | _____ | _____ | _____ |
+| Normal | 5 | 3 | Área 15, perímetro 16 | 15 y 16 | si |
+| Cuadrado | 4 | 4 | Área 16, perímetro 16 | 16 y 16 | si |
+| Decimales | 2.5 | 4 | Área 10, perímetro 13 | 10 y 13 | si |
+| Muy pequeño | 0.1 | 0.1 | Área 0.01, perímetro 0.4 |0.1 y 0.4 | si |
+| Ancho cero | 0 | 3 | vuelve a pedir el ancho | pide de nuevo | si |
+| Alto negativo | 5 | -2 | vuelve a pedir el alto | pide el alto nuevamente | si |
+| Texto | `abc` | 3 | `leerDecimal` vuelve a pedir | pide de nuevo | si |
+| Caso propio 1 | 4 | 3 | 12 | 14 | funciiona |
+| Caso propio 2 | 4| 4 | 16 | 16 | funciona |
 
 ## 10. Bitácora de mejoras (Fase 4)
 
@@ -105,28 +105,28 @@ _____
 ## 12. Reflexión final
 
 **¿Qué aprendí con esta práctica?**
-_____
+Aprendí que un programa se diseña antes de escribirse: primero la receta y luego el código. También aprendí a validar datos con un ciclo `do-while`, a distinguir qué revisa `leerDecimal` (el formato) y a usar paréntesis para que los operadores no cambien mi resultado, como en `2 * (ancho + alto)`.
 
 **Ahora que terminé, ¿qué cambiaría de mi proceso?**
-_____
+Compilaría más seguido, después de cada paso pequeño, en lugar de escribir varios bloques y compilar al final. Así los errores se encuentran de uno en uno y es más fácil ubicarlos. También haría los commits justo al terminar cada paso.
 
 **¿Qué fue lo más difícil y cómo lo resolví?**
-_____
+Lo más difícil fueron los errores de compilación. Me faltó el `;` al final del `while (ancho <= 0)` y de la línea donde leo el alto, y además se me quedo por error un punto suelto en el código. Lo resolví leyendo el mensaje del compilador con calma: indica la línea y qué esperaba encontrar. Aprendí a arreglar primero el primer error, porque los demás suelen ser consecuencia de ese.
 
 **¿Qué pregunta me quedó sin responder?**
 _____
 
 **Diseñar la receta desde cero, ¿fue más fácil o más difícil de lo que esperaba? ¿Qué haría distinto la próxima vez?**
-_____
+La fórmula era sencilla, pero decidir el orden de los pasos y qué hacer con un dato inválido requirió más cuidado del que esperaba. La próxima vez probaría la receta a mano con un caso inválido antes de programar, para encontrar los huecos desde la receta y no desde el código.
 
 ## 13. Lista de verificación antes de entregar (Fase 5)
 
-- [ ] Llené todas las secciones (no quedan `_____`)
-- [ ] Escribí mi receta completa en `RECETA.md` antes de programar
-- [ ] Mi programa compila sin advertencias
-- [ ] Probé todos los casos de la tabla
-- [ ] Hice los Experimentos A y B y dejé el código correcto al terminar
-- [ ] No modifiqué `utilerias.h`
-- [ ] Hice al menos 3 commits con mensajes claros
-- [ ] Hice `git push` y verifiqué mi fork en GitHub
-- [ ] Entregué el enlace de mi fork en Classroom
+- [/] Llené todas las secciones (no quedan `_____`)
+- [/] Escribí mi receta completa en `RECETA.md` antes de programar
+- [/] Mi programa compila sin advertencias
+- [/] Probé todos los casos de la tabla
+- [/] Hice los Experimentos A y B y dejé el código correcto al terminar
+- [/] No modifiqué `utilerias.h`
+- [/] Hice al menos 3 commits con mensajes claros
+- [/] Hice `git push` y verifiqué mi fork en GitHub
+- [/] Entregué el enlace de mi fork en Classroom
